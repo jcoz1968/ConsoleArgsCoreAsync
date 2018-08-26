@@ -16,9 +16,7 @@ namespace ConsoleArgsCoreAsync
 
             app.OnExecute(async () =>
             {
-                var subject = optionSubject.HasValue()
-                    ? optionSubject.Value()
-                    : "world";
+                var subject = optionSubject.HasValue() ? optionSubject.Value() : "world";
 
                 var count = optionRepeat.HasValue() ? optionRepeat.ParsedValue : 1;
                 for (var i = 0; i < count; i++)
